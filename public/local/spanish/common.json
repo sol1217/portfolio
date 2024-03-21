@@ -1,0 +1,12 @@
+{
+  "common": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "project": "Proyecto",
+    "contact": "Contacto",
+    "english": "Inglés",
+    "spanish": "Español",
+    "background": "Fondo"
+  }
+}

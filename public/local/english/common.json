@@ -1,0 +1,12 @@
+{
+  "common": {
+    "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
+    "project": "Project",
+    "contact": "Contact",
+    "english": "English",
+    "spanish": "Spanish",
+    "background": "Background"
+  }
+}
