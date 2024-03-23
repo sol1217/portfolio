@@ -13,13 +13,8 @@ import {
   HeaderContainer,
 } from '@features/layout/Header/Header.elements'
 
-export const Header: React.FC<HeaderProps> = ({
-  backgroundColor,
-  setBackgroundColor,
-  color,
-  setColor,
-}) => {
-  const { t } = useTranslation() // Now useTranslation will have access to the i18n instance
+export const Header = () => {
+  /*const { t } = useTranslation() // Now useTranslation will have access to the i18n instance
   const router = useRouter()
 
   const handleChangeLanguage = (e) => {
@@ -34,10 +29,9 @@ export const Header: React.FC<HeaderProps> = ({
     const newColor = color === '#fff' ? '#000' : '#fff'
     setBackgroundColor(newBackgroundColor)
     setColor(newColor)
-  }
+  }*/
 
-  return (
-    <HeaderContainer>
+  /*<HeaderContainer>
       <RouteBox>
         <Links href="">{t('home')}</Links>
         <Links href="">{t('experience')}</Links>
@@ -52,6 +46,7 @@ export const Header: React.FC<HeaderProps> = ({
         </Buttons>
         <Buttons onClick={toggleBackground}>{t('background')}</Buttons>
       </ButtonContainer>
-    </HeaderContainer>
-  )
+    </HeaderContainer>*/
+
+  return <div>Sol</div>
 }
