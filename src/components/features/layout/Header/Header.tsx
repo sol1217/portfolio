@@ -1,11 +1,12 @@
 'use client'
-import i18n from 'i18next'
+
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 
 import {
+  Links,
   Buttons,
   RouteBox,
   ButtonContainer,
@@ -38,11 +39,11 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <HeaderContainer>
       <RouteBox>
-        <Link href="">{t('home')}</Link>
-        <Link href="">{t('experience')}</Link>
-        <Link href="">{t('skills')}</Link>
-        <Link href="">{t('project')}</Link>
-        <Link href="">{t('contact')}</Link>
+        <Links href="">{t('home')}</Links>
+        <Links href="">{t('experience')}</Links>
+        <Links href="">{t('skills')}</Links>
+        <Links href="">{t('project')}</Links>
+        <Links href="">{t('contact')}</Links>
       </RouteBox>
       <ButtonContainer>
         <Buttons onChange={handleChangeLanguage} defaultValue={i18n.language}>

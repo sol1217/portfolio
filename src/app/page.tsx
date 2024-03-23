@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 
 import { Header, HomePage } from '@features'
+import { Scroll } from '@core/Scroll/Scroll'
+import { Footer } from '@features/layout/Footer/Footer'
 
 export default function Page() {
   const [language, setLanguage] = useState('English')
@@ -12,7 +14,7 @@ export default function Page() {
   useEffect(() => {
     document.body.style.backgroundColor = background
     document.body.style.color = color
-  }, [background])
+  }, [color, background])
 
   return (
     <div>
@@ -25,6 +27,8 @@ export default function Page() {
         setLanguage={setLanguage}
       />
       <HomePage language={language} />
+      <Scroll />
+      <Footer />
     </div>
   )
 }

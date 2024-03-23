@@ -5,7 +5,7 @@ export const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 75px;
 `
 
 export const ImageProfile = styled(Image)`
@@ -30,7 +30,7 @@ export const InformationBox = styled.div`
 
 export const ExperienceText = styled.span`
   border-bottom: 2px solid blueviolet;
-  font-size: 26px;
+  font-size: 30px;
   padding: 10px 10px 10px 0;
 `
 

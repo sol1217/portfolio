@@ -1,46 +1,53 @@
+import { useState } from 'react'
 import Image from 'next/image'
+import { FaCodepen } from 'react-icons/fa'
+import { IoMdSettings } from 'react-icons/io'
 import { IoCodeSlash } from 'react-icons/io5'
-import { RiBaseStationFill } from 'react-icons/ri'
 
 import {
   ItemBox,
+  CoursesBox,
+  AbilityText,
+  TitleSkills,
   AbilitiesBox,
   SkillsContainer,
   EachSkillsContainer,
 } from '@features/Skills/Skills.elements'
 
 export const Skills = () => {
-  const frontend = ['Hml', 'Css', 'Sass', 'Javascript', 'TypeScript', 'Git/Git Hub']
-  const frameworks = ['React js', 'Next js', 'Vue js', 'Node js', 'React Native']
-  const courses = ['Banking and Finances', 'Customer Services', 'Entrepreneurship']
+  const frontend = ['Hml', 'Css', 'Sass', 'Javascript', 'TypeScript', 'Git ']
+  const frameworks = ['React js', 'Next js', 'Vue js', 'Node js', 'React Native', 'Git Hub']
+  const courses = ['Banking and Finances', 'Customer Services']
+
   return (
     <SkillsContainer>
+      <TitleSkills>Acquired Technical Skills</TitleSkills>
       <AbilitiesBox>
         <ItemBox>
           <IoCodeSlash style={{ color: '#604e81' }} fontSize={200} />
           <EachSkillsContainer>
             {frontend.map((elemento, index) => (
-              <p key={index}>{elemento}</p>
+              <AbilityText key={index}>{elemento}</AbilityText>
             ))}
           </EachSkillsContainer>
         </ItemBox>
 
         <ItemBox>
-          <RiBaseStationFill style={{ color: '#604e81' }} fontSize={200} />
+          <IoMdSettings style={{ color: '#604e81' }} fontSize={200} />
           <EachSkillsContainer>
             {frameworks.map((elemento, index) => (
-              <p key={index}>{elemento}</p>
+              <AbilityText key={index}>{elemento}</AbilityText>
             ))}
           </EachSkillsContainer>
         </ItemBox>
 
         <ItemBox>
-          <RiBaseStationFill style={{ color: '#604e81' }} fontSize={200} />
-          <EachSkillsContainer>
+          <FaCodepen style={{ color: '#604e81' }} fontSize={160} />
+          <CoursesBox>
             {courses.map((elemento, index) => (
-              <p key={index}>{elemento}</p>
+              <AbilityText key={index}>{elemento}</AbilityText>
             ))}
-          </EachSkillsContainer>
+          </CoursesBox>
         </ItemBox>
       </AbilitiesBox>
     </SkillsContainer>

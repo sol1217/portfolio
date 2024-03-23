@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
@@ -16,6 +17,12 @@ export const RouteBox = styled.nav`
   align-items: center;
   gap: 20px;
   font-size: 23px;
+`
+
+export const Links = styled(Link)`
+  &:hover {
+    color: #29b3d3;
+  }
 `
 
 export const ButtonContainer = styled.div`

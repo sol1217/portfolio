@@ -35,3 +35,12 @@ yarn-error.log*
 next-env.d.ts
 
 .idea/
+.idea
+.eslintrc.json
+environment.d.ts
+next.config.js
+.yarn.lock
+.prettierrc.json
+next-i18next.config.js
+plopfile.js
+tsconfig.json

@@ -10,8 +10,10 @@ import { FaVoicemail } from 'react-icons/fa6'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
 import { About } from '@features/About/About'
+import { Contact } from '@features/Contact/Contact'
 import { Skills } from '@features/Skills/Skills'
 
+import { Projects } from '../../../Projects/Projects'
 import {
   LinksBox,
   TitleWithName,
@@ -86,6 +88,8 @@ export const HomePage: React.FC<HomeProps> = ({ language }) => {
 
       <About />
       <Skills />
+      <Projects />
+      <Contact />
     </HomePageContainer>
   )
 }
