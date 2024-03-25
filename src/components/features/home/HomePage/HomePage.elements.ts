@@ -6,8 +6,13 @@ export const HomePageContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
   margin-top: 100px;
+  padding-top: 100px;
+
+  @media (max-width: 900px) {
+    margin-top: 0;
+  }
 `
 
 export const IntroduceContainer = styled.div`
@@ -27,6 +32,22 @@ export const TitleWithName = styled.h1`
   color: transparent;
   font-family: Arial;
   font-weight: bold;
+
+  @media (max-width: 910px) {
+    font-size: 100px;
+  }
+
+  @media (max-width: 680px) {
+    font-size: 70px;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 370px) {
+    font-size: 35px;
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -34,6 +55,25 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+`
+
+export const Profession = styled.h2`
+  @media (max-width: 910px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 680px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 340px) {
+    font-size: 10px;
+  }
+  
 `
 
 export const ButtonInformation = styled.button`
@@ -52,6 +92,15 @@ export const ButtonInformation = styled.button`
   &:active {
     transform: scale(0.97);
   }
+
+  @media (max-width: 680px) {
+    padding: 6px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 12px;
+  }
 `
 
 export const LinksBox = styled.div`
@@ -62,4 +111,9 @@ export const LinksBox = styled.div`
   width: 900px;
   gap: 10px;
   padding: 10px;
+
+  @media (max-width: 1040px) {
+    width: inherit;
+    flex-direction: row;
+  }
 `

@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { FaCodepen } from 'react-icons/fa'
+import { IoMdSettings } from 'react-icons/io'
+import { IoCodeSlash } from 'react-icons/io5'
 
 export const SkillsContainer = styled.div`
   display: flex;
@@ -6,7 +9,11 @@ export const SkillsContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  margin-top: 150px;
+  height: 700px;
+
+  @media (max-width: 960px) {
+    margin-top: 70px;
+  }
 `
 export const TitleSkills = styled.h2`
   background: linear-gradient(45deg, #bd609b, #8782b7, #29b3d3, #29becd);
@@ -14,6 +21,14 @@ export const TitleSkills = styled.h2`
   -webkit-background-clip: text;
   color: transparent;
   font-size: 40px;
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 24px;
+  }
 `
 
 export const AbilitiesBox = styled.div`
@@ -23,6 +38,10 @@ export const AbilitiesBox = styled.div`
   gap: 100px;
   width: 100em;
   text-align: center;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 `
 
 export const ItemBox = styled.div`
@@ -34,6 +53,62 @@ export const ItemBox = styled.div`
   padding: 10px;
   text-align: center;
   border-radius: 10px;
+
+  @media (max-width: 1300px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 1060px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 8px;
+  }
+ 
+`
+
+export const IoCodeIcon = styled(IoCodeSlash)`
+  @media (max-width: 1300px) {
+    font-size: 130px;
+  }
+
+  @media (max-width: 1060px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 70px;
+  }
+  
+`
+
+export const IoMdIcon = styled(IoMdSettings)`
+  @media (max-width: 1300px) {
+    font-size: 130px;
+  }
+
+  @media (max-width: 1060px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 70px;
+  }
+`
+
+export const FaCodeIcon = styled(FaCodepen)`
+  @media (max-width: 1300px) {
+    font-size: 130px;
+  }
+
+  @media (max-width: 1060px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 70px;
+  }
 `
 
 export const EachSkillsContainer = styled.div`

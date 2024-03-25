@@ -17,7 +17,7 @@ import {
   ContactInformation,
 } from '@features/Contact/Contact.elements'
 
-export const Contact = () => {
+export const Contact: React.FC<{ id: string }> = ({ id}) => {
   const form = useRef<HTMLFormElement>(null)
   const [isSent, setIsSent] = useState<boolean>(false)
 
@@ -42,11 +42,11 @@ export const Contact = () => {
   }
 
   return (
-    <ContactContainer>
+    <ContactContainer id={id}>
       <TitleContact>You can contact me in this section</TitleContact>
       <InformationBox>
         <ContactInformation>
-          <TextContact>Dont hesitate to contact me</TextContact>
+          <TextContact>Do not hesitate to contact me</TextContact>
           <ContactButton>
             <a href="https://t.me/solci29">Contact me</a>
           </ContactButton>

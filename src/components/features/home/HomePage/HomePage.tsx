@@ -21,6 +21,7 @@ import {
   ButtonInformation,
   HomePageContainer,
   IntroduceContainer,
+  Profession
 } from './HomePage.elements'
 
 export const HomePage: React.FC<HomeProps> = ({ language }) => {
@@ -54,9 +55,9 @@ export const HomePage: React.FC<HomeProps> = ({ language }) => {
   return (
     <HomePageContainer>
       <IntroduceContainer>
-        <h2>{introTexts.greeting}</h2>
+        <Profession>{introTexts.greeting}</Profession>
         <TitleWithName>Sol Calderón</TitleWithName>
-        <h2>{introTexts.profession}</h2>
+        <Profession>{introTexts.profession}</Profession>
         <ButtonContainer>
           <ButtonInformation>
             <a href={pdfUrl} download>
@@ -72,7 +73,7 @@ export const HomePage: React.FC<HomeProps> = ({ language }) => {
       </IntroduceContainer>
 
       <LinksBox>
-        <Link href="https://www.linkedin.com/in/sol-calderón-30aa7425a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BX7ybWozOQTWMMLApO%2Bq%2BlA%3D%3D">
+        <Link  href="https://www.linkedin.com/in/sol-calderón-30aa7425a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BX7ybWozOQTWMMLApO%2Bq%2BlA%3D%3D">
           <FaLinkedinIn fontSize={30} style={{ color: '#8b8d8e' }} />
         </Link>
         <Link href="https://github.com/sol1217">
@@ -86,10 +87,10 @@ export const HomePage: React.FC<HomeProps> = ({ language }) => {
         </Link>
       </LinksBox>
 
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <About id="about"/>
+      <Skills id="skills"/>
+      <Projects id="project"/>
+      <Contact id="contact"/>
     </HomePageContainer>
   )
 }

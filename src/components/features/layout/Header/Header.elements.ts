@@ -19,7 +19,7 @@ export const RouteBox = styled.nav`
   font-size: 23px;
 `
 
-export const Links = styled(Link)`
+export const Links = styled.div`
   &:hover {
     color: #29b3d3;
   }
@@ -43,4 +43,13 @@ export const Buttons = styled.button`
   &:active {
     transform: scale(0.97);
   }
+`
+
+export const EmailLink = styled(Link)`
+  background-color: #604e81;
+  border-radius: 20px;
+  padding: 7px;
+  color: white;
+  border: none;
+  cursor: pointer;
 `

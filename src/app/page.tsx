@@ -18,7 +18,7 @@ export default function Page() {
 
   return (
     <div>
-      <Header />
+      <Header backgroundColor={background} color={color} setBackgroundColor={setBackground} setColor={setColor}/>
       <HomePage language={language} />
       <Scroll />
       <Footer />

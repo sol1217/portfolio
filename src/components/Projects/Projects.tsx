@@ -17,16 +17,18 @@ import {
   ItemProjectBox,
   DescriptionText,
   ProjectContainer,
+  FaLongArrow
+
 } from './Projects.elements'
 
-export const Projects = () => {
+export const Projects: React.FC<{ id: string }> = ({ id}) => {
   return (
-    <ProjectContainer>
+    <ProjectContainer id={id}>
       <ProjectText>Projects Created</ProjectText>
       <ItemProjectBox>
         <ItemBox>
           <Images src={segway} alt="Project Segway" width={500} height={300} />
-          <FaLongArrowAltRight fontSize={500} />
+          <FaLongArrow fontSize={500} />
           <DescriptionBox>
             <ViewBox>
               <TitleProject>Segway powersports</TitleProject>
@@ -49,7 +51,7 @@ export const Projects = () => {
 
         <ItemBox>
           <Images src={mobilApp} alt="Project Segway" width={500} height={300} />
-          <FaLongArrowAltRight fontSize={500} />
+          <FaLongArrow fontSize={500} />
           <DescriptionBox>
             <ViewBox>
               <TitleProject>Bar Management App</TitleProject>
@@ -58,19 +60,19 @@ export const Projects = () => {
               </Link>
             </ViewBox>
             <DescriptionText>
-              Is an innovative mobile application developed with React Native, javascript, node js,
-              express, Reservation Management: Allows users to manage table and event reservations
-              efficiently. Simplifies the operational management of bars and similar establishments.
-              With its extensive feature set and intuitive interface, this application becomes an
-              indispensable ally for owners and managers seeking to optimize efficiency and maximize
-              the success of their businesses in the hospitality industry.
+              It is an innovative mobile application developed with React Native, javascript, node js,
+              express, Reservation Management: allows users to manage table and event reservations.
+              Simplifies the operational management of bars and similar establishments.
+              functions and its intuitive interface, this application becomes a
+              Essential ally for owners and managers seeking to optimize efficiency and maximize
+              the success of their businesses.
             </DescriptionText>
           </DescriptionBox>
         </ItemBox>
 
         <ItemBox>
           <Images src={chat} alt="Project Segway" width={500} height={300} />
-          <FaLongArrowAltRight fontSize={500} />
+          <FaLongArrow fontSize={500} />
           <DescriptionBox>
             <ViewBox>
               <TitleProject>Virtual Chat page</TitleProject>

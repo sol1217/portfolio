@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react'
 import Image from 'next/image'
 import { FaCodepen } from 'react-icons/fa'
@@ -12,19 +14,22 @@ import {
   AbilitiesBox,
   SkillsContainer,
   EachSkillsContainer,
+  IoCodeIcon,
+  IoMdIcon,
+  FaCodeIcon
 } from '@features/Skills/Skills.elements'
 
-export const Skills = () => {
+export const Skills: React.FC<{ id: string }> = ({ id}) => {
   const frontend = ['Hml', 'Css', 'Sass', 'Javascript', 'TypeScript', 'Git ']
   const frameworks = ['React js', 'Next js', 'Vue js', 'Node js', 'React Native', 'Git Hub']
   const courses = ['Banking and Finances', 'Customer Services']
 
   return (
-    <SkillsContainer>
+    <SkillsContainer id={id}>
       <TitleSkills>Acquired Technical Skills</TitleSkills>
       <AbilitiesBox>
         <ItemBox>
-          <IoCodeSlash style={{ color: '#604e81' }} fontSize={200} />
+          <IoCodeIcon style={{ color: '#604e81' }} fontSize={200} />
           <EachSkillsContainer>
             {frontend.map((elemento, index) => (
               <AbilityText key={index}>{elemento}</AbilityText>
@@ -33,7 +38,7 @@ export const Skills = () => {
         </ItemBox>
 
         <ItemBox>
-          <IoMdSettings style={{ color: '#604e81' }} fontSize={200} />
+          <IoMdIcon style={{ color: '#604e81' }} fontSize={200} />
           <EachSkillsContainer>
             {frameworks.map((elemento, index) => (
               <AbilityText key={index}>{elemento}</AbilityText>
@@ -42,7 +47,7 @@ export const Skills = () => {
         </ItemBox>
 
         <ItemBox>
-          <FaCodepen style={{ color: '#604e81' }} fontSize={160} />
+          <FaCodeIcon style={{ color: '#604e81' }} fontSize={160} />
           <CoursesBox>
             {courses.map((elemento, index) => (
               <AbilityText key={index}>{elemento}</AbilityText>
