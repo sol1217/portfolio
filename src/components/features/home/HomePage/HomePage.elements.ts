@@ -11,7 +11,7 @@ export const HomePageContainer = styled.div`
   padding-top: 100px;
 
   @media (max-width: 900px) {
-    margin-top: 0;
+    margin-top: 60px;
   }
 `
 

@@ -16,8 +16,9 @@ import {
 
 export const About: React.FC<{ id: string }> = ({ id}) => {
   const { t } = useTranslation('common')
+
   return (
-    <AboutContainer  id={id}>
+    <AboutContainer id={id}>
       <ProfessionalInformationBox>
         <ImageProfile src={solPicture} alt="Profile Picture" width={300} height={300} />
         <InformationBox>

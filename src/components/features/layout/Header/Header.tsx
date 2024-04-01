@@ -6,23 +6,34 @@ import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import { MdAttachEmail } from "react-icons/md"
+import { FaHome } from "react-icons/fa"
+import { IoGitNetwork } from "react-icons/io5"
+import { MdPermContactCalendar } from "react-icons/md"
+import { AiOutlineCodepenCircle } from "react-icons/ai"
+import { FaCode } from "react-icons/fa"
+import { NavigationLinks } from "../Header/NavigationLinks/NavigationLinks"
 
 import {
   Links,
   Buttons,
-  RouteBox,
   ButtonContainer,
   HeaderContainer,
-  EmailLink
+  EmailLink,
+  MobilNavBox,
+  RouteMobilNav,
+  ToggleButton,
+  NavBox,
+  ButtonBox
 } from '@features/layout/Header/Header.elements'
 
 export const Header: React.FC<HeaderProps> = ({backgroundColor,setBackgroundColor, color, setColor}) => {
   const { t } = useTranslation("common")
   const router = useRouter()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleChangeLanguage = () => {
 
-  };
+  }
 
 
   const toggleBackground = () => {
@@ -34,17 +45,23 @@ export const Header: React.FC<HeaderProps> = ({backgroundColor,setBackgroundColo
 
   return (
     <HeaderContainer>
-      <RouteBox>
-        <Link href="/">{t('Home')}</Link>
-        <Link href="#about">Experience</Link>
-        <Link href="#skills">Skills</Link>
-        <Link href="#project">Project</Link>
-        <Link href="#contact">Contact</Link>
-      </RouteBox>
-      <ButtonContainer>
-        <EmailLink href="mailto:solc0275@gmail.com?Subject=Portfolio%20Sol%20Calderon%20">Correo Electronico</EmailLink>
-        <Buttons onClick={toggleBackground}>background</Buttons>
-      </ButtonContainer>
+      <NavBox>
+        <NavigationLinks/>
+        <ButtonContainer>
+          <EmailLink href="mailto:solc0275@gmail.com?Subject=Portfolio%20Sol%20Calderon%20">Correo Electronico</EmailLink>
+          <Buttons onClick={toggleBackground}>background</Buttons>
+        </ButtonContainer>
+      </NavBox>
+
+
+        <ToggleButton onClick={() => setMenuOpen(!menuOpen)} $active={menuOpen} />
+      
+
+      {menuOpen && (
+      <MobilNavBox>
+        <NavigationLinks/>
+      </MobilNavBox>
+      )}
     </HeaderContainer>
   )
 }

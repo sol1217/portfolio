@@ -15,6 +15,7 @@ import {
   InformationBox,
   ContactContainer,
   ContactInformation,
+  ContactInfo
 } from '@features/Contact/Contact.elements'
 
 export const Contact: React.FC<{ id: string }> = ({ id}) => {
@@ -50,10 +51,10 @@ export const Contact: React.FC<{ id: string }> = ({ id}) => {
           <ContactButton>
             <a href="https://t.me/solci29">Contact me</a>
           </ContactButton>
-          <p>
+          <ContactInfo>
             If you want to contact me you can do so by filling out the form <br />
             or visit the links below, thank you!! ☺️
-          </p>
+          </ContactInfo>
           <EmailBox>
             <MdOutlineMailOutline style={{ color: 'gray' }} fontSize={25} />
             solc0275@gmail.com

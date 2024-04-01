@@ -33,7 +33,7 @@ export const ProfessionalInformationBox = styled.div`
   gap: 30px;
   
   @media (max-width: 920px) {
-    width: 100vw;
+    width: 90vw;
     padding: 20px;
   }
 

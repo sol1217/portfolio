@@ -8,6 +8,10 @@ export const ContactContainer = styled.div`
   gap: 50px;
   margin-top: 100px;
   width: 70%;
+
+  @media (max-width: 655px) {
+    margin-top: 0;
+  }
 `
 
 export const TitleContact = styled.h2`
@@ -16,6 +20,29 @@ export const TitleContact = styled.h2`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  @media (max-width: 655px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 580px) {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 410px) {
+    color: white;
+    font-size: 15px;
+  }
+
+  @media (max-width: 350px) {
+    display: none;
+  }
+  
 `
 
 export const InformationBox = styled.div`
@@ -23,6 +50,10 @@ export const InformationBox = styled.div`
   justify-content: space-evenly;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 1020px) {
+    flex-direction: column;
+  }
 `
 
 export const ContactInformation = styled.div`
@@ -30,10 +61,36 @@ export const ContactInformation = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 520px) {
+    align-items: center;
+  }
+`
+
+export const ContactInfo = styled.span`
+  @media (max-width: 470px) {
+    width: 90%;
+    text-align: center;
+  }
+
+  @media (max-width: 410px) {
+    width: 300px;
+  }
+
+  @media (max-width: 350px) {
+    width: 230px;
+  }
 `
 
 export const TextContact = styled.h1`
   border-bottom: 2px solid blueviolet;
+
+  @media (max-width: 510px) {
+    font-size: 30px;
+    width: 70%;
+    text-align: center;
+  }
+  
 `
 
 export const ContactButton = styled.button`
@@ -49,6 +106,11 @@ export const ContactButton = styled.button`
 
   &:active {
     transform: scale(0.97);
+  }
+
+  @media (max-width: 520px) {
+    width: 170px;
+    font-size: 24px;
   }
 `
 
@@ -73,6 +135,14 @@ export const InputBox = styled.input`
   padding: 8px;
   border: none;
   background-color: #efe9e9;
+
+  @media (max-width: 470px) {
+    width: 300px;
+  }
+
+  @media (max-width: 350px) {
+    width: 270px;
+  }
 `
 
 export const TextAreatBox = styled.textarea`
@@ -80,6 +150,14 @@ export const TextAreatBox = styled.textarea`
   border-radius: 5px;
   padding: 5px;
   background-color: #efe9e9;
+
+  @media (max-width: 470px) {
+    width: 300px;
+  }
+
+  @media (max-width: 350px) {
+    width: 270px;
+  }
 `
 
 export const SendButton = styled.button`
@@ -98,5 +176,13 @@ export const SendButton = styled.button`
 
   &:active {
     transform: scale(0.97);
+  }
+
+  @media (max-width: 470px) {
+    width: 300px;
+  }
+
+  @media (max-width: 350px) {
+    width: 270px;
   }
 `

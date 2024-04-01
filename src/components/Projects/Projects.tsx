@@ -22,6 +22,7 @@ import {
 } from './Projects.elements'
 
 export const Projects: React.FC<{ id: string }> = ({ id}) => {
+
   return (
     <ProjectContainer id={id}>
       <ProjectText>Projects Created</ProjectText>
